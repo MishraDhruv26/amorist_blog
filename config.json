@@ -1,0 +1,18 @@
+{
+    "params":
+    {
+        "local_server":"True",
+        "local_url":"mysql+pymysql://root:@localhost/the_amorists",
+        "Prod_url":"mysql+pymysql://root:@localhost/the_amorists",
+        "fb_url":"https://facebook.com/insidworld",
+        "tw_url":"https://twitter.com/insidworld",
+        "inst_url":"https://instagram.com/the_amorist_",
+        "blog_name":"The_Amorist",
+        "gmail_user":"insidewrld08@gmail.com",
+        "gmail_pass":"gotube@1",
+        "no_of_posts":2,
+        "admin_name": "amorist",
+        "admin_pass": "decided",
+        "upload_location": "F:\\Dhruv\\website\\amorist blog\\static\\img"
+    }
+}

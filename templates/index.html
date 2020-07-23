@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('{{ url_for('static', filename='img/home.jpg')}}')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>AMORIST</h1>
+            <span class="subheading">Dedicated to everyone who thinks I'm writing about them. I am :))</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+      <div class="row">
+
+
+
+        {% for posts in posts %} 
+        
+        <div class="col-md-4 mx-auto">
+          <div class="card mb-2 shadow-lg">
+            <a href="/post/{{posts.slug}}">
+            <div class="img-box">
+            {%  set Iname =  'img/' + posts.img_file %}
+            <img src="{{ url_for('static', filename = Iname)}}" width="100%" height="325">
+            </div>
+            <div class="card-body" class="post-preview">
+              {{posts.content[0:20]}}...
+              <h2 class="card-text" class="post-title">Read More...</h2>
+              </a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+
+
+
+      </div>
+    </div>
+    <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-8 mx-auto">
+        <div class="clearfix">
+          <a class="btn btn-primary float-left" href="{{prev}}">&larr; Previous</a>
+        
+          <a class="btn btn-primary float-right" href="{{next}}">Newer &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        <!-- Pager -->
+  <!-- <div class="container">
+    <div class="row">
+      <div class="col-lg-16 col-md-8 mx-auto">
+        <div class="clearfix">
+          <a class="btn btn-primary float-left" href="/poems">Poems and Articles</a>
+        
+          <a class="btn btn-primary float-right" href="/oneliners">Oneliners</a>
+        </div>
+      </div>
+    </div>
+  </div>
+   -->
+
+ 
+
+  {% endblock %}
+
+ 
