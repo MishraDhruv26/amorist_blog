@@ -2,7 +2,6 @@ from flask import Flask, render_template, request, session, redirect
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.utils import secure_filename
 from flask_mail import Mail, Message
-# from flask_ngrok import run_with_ngrok
 import json
 import datetime
 import os
@@ -12,7 +11,6 @@ with open('config.json', 'r') as c:
     params=json.load(c)["params"]
 
 app = Flask(__name__)
-# run_with_ngrok(app)
 app.secret_key = 'super-secret-key'
 app.config['UPLOAD_FOLDER'] = params['upload_location']
 app.config.update(
@@ -47,7 +45,6 @@ class Posts(db.Model):
     '''Posts database class is this'''
     Sno = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(80),  nullable=True)
-    # tagline = db.Column(db.String(120), nullable=False)
     slug = db.Column(db.String(21),  nullable=False)
     content = db.Column(db.String(120), nullable=False)
     date = db.Column(db.String(12),  nullable=False)
@@ -174,14 +171,7 @@ def contact():
 
     return render_template('contact.html', params=params)
 
-# @app.route("/uploader", methods=['GET','POST'])
-# def uploader():
-#     if 'user' in session and session['user'] == params['admin_name']:
-#         if (request.method=='POST'):
-#             f = request.files['file1']
-#             # img_fname=f.filename
-#             f.save(os.path.join(app.config['UPLOAD_FOLDER'], secure_filename(f.filename)))
-#             return ("Uploaded Successfully")
+
 
 @app.route("/logout")
 def logout():
