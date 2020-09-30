@@ -11,8 +11,8 @@
         "gmail_user":"insidewrld08@gmail.com",
         "gmail_pass":"gotube@1",
         "no_of_posts":2,
-        "admin_name": "amorist",
-        "admin_pass": "anigari@100",
+        "admin_name": "",
+        "admin_pass": "",
         "upload_location": "static\\img"
     }
 }
