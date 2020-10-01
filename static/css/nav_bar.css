@@ -11,12 +11,12 @@
 }
 .navbar-brand img
 {
-    height: 50px;
-    padding-left: 50px;
+    height: 60px;
+    padding-left: 70px;
 }
 .navbar-nav li
 {
-    padding: 0 10px;
+    padding: 0 12px;
 }
 .navbar-nav li a
 {
@@ -38,7 +38,7 @@
 /*.nav-link
 {
     color: #555;!important;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 14px;
     
 }
